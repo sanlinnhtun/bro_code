@@ -1,0 +1,43 @@
+* {
+  margin: auto;
+  margin-top: 20px;
+}
+.container {
+  text-align: center;
+}
+
+.img {
+  width: 200px;
+  border-radius: 30px;
+}
+
+#img-con {
+  display: flex;
+}
+
+#btn {
+  font-family: Roboto, sans-serif;
+  background-color: rgba(15, 158, 229, 0.939);
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+.ref-btn {
+  font-family: Roboto, sans-serif;
+  background-color: rgba(15, 158, 229, 0.939);
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
