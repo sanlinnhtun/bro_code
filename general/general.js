@@ -84,41 +84,66 @@
 
 //!Number guesing game
 
-const minNum = 1;
-const maxNum = 100;
-const answer = Math.floor(Math.random() * (maxNum - minNum + 1) + 1);
-console.log(answer);
+// const minNum = 1;
+// const maxNum = 100;
+// const answer = Math.floor(Math.random() * (maxNum - minNum + 1) + 1);
+// console.log(answer);
 
-let attempts = 0;
-let guess;
-let running = true;
+// let attempts = 0;
+// let guess;
+// let running = true;
 
-while (running) {
-  guess = Number(prompt('Enter the guess number'));
+// while (running) {
+//   guess = Number(prompt('Enter the guess number'));
 
-  if (isNaN(guess)) {
-    alert('Enter the valid number');
-  } else if (guess < minNum || guess > maxNum) {
-    alert('Enter the valid number between 1 - 100 ');
-  } else {
-    attempts++;
-    if (guess < answer) {
-      alert('Too low try again!');
-      running = false;
-    } else if (guess > answer) {
-      alert('too hight');
-      running = false;
-    } else {
-      alert(`CORRECT THE ANSWER, The answer was ${attempts}`);
-      running = false;
-    }
-  }
+//   if (isNaN(guess)) {
+//     alert('Enter the valid number');
+//   } else if (guess < minNum || guess > maxNum) {
+//     alert('Enter the valid number between 1 - 100 ');
+//   } else {
+//     attempts++;
+//     if (guess < answer) {
+//       alert('Too low try again!');
+//       running = false;
+//     } else if (guess > answer) {
+//       alert('too hight');
+//       running = false;
+//     } else {
+//       alert(`CORRECT THE ANSWER, The answer was ${attempts}`);
+//       running = false;
+//     }
+//   }
 
-  console.log(typeof guess, guess);
-  // running = false;
+//   console.log(typeof guess, guess);
+// running = false;
+// }
+
+// const arr = [1, 3, 4, 5];
+
+// const arrM = [...arr, 5, 6, 7, 8];
+// console.log(arrM);
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const squares = numbers.map(square);
+console.log(squares);
+
+function square(element) {
+  return Math.pow(element, 2);
 }
 
-const arr = [1, 3, 4, 5];
+function Car(make, model, year, color) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.color = color;
+  this.drive = () => {
+    console.log(`I'm drive ${this.make}`);
+  };
+}
 
-const arrM = [...arr, 5, 6, 7, 8];
-console.log(arrM);
+const car1 = new Car('Ford', 'az12', '2024', 'red');
+console.log(car1.make);
+console.log(car1.model);
+console.log(car1.year);
+console.log(car1.color);
+console.log(car1.drive());
