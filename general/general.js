@@ -103,3 +103,59 @@ function shuffle(array) {
 shuffle(cards);
 
 console.log(cards);
+
+//!Closure
+
+function createCounter() {
+  let count = 0;
+
+  function increamentCount() {
+    count++;
+    console.log(`Increament counter number is ${count}`);
+  }
+
+  function getCount() {
+    return count;
+  }
+
+  return { increamentCount, getCount };
+}
+
+const counter = createCounter();
+
+counter.increamentCount();
+counter.increamentCount();
+counter.increamentCount();
+counter.increamentCount();
+counter.increamentCount();
+counter.increamentCount();
+
+console.log(`The current count is ${counter.getCount()}`);
+
+function createGame() {
+  let score = 0;
+
+  function increateFun(points) {
+    score += points;
+    console.log(`The score +${score} pst`);
+  }
+
+  function decreateFun(points) {
+    score -= points;
+    console.log(`The score -${score} pst`);
+  }
+
+  function getPoint() {
+    return score;
+  }
+
+  return { increateFun, decreateFun, getPoint };
+}
+
+const game = createGame();
+
+game.increateFun(10);
+game.decreateFun(6);
+// game.increateFun();
+
+console.log(`The final score is ${game.getPoint()}`);
