@@ -95,7 +95,6 @@ const cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const random = Math.floor(Math.random() * (i + 1));
-
     [array[i], array[random]] = [array[random], array[i]];
   }
 }
@@ -159,3 +158,31 @@ game.decreateFun(6);
 // game.increateFun();
 
 console.log(`The final score is ${game.getPoint()}`);
+
+//! synchronous / Asynchronous
+
+function func1(callback) {
+  setTimeout(() => {
+    console.log('Tast 1');
+    callback();
+  }, 3000);
+}
+
+function fucn2() {
+  console.log('Tast 2');
+  console.log('Tast 3');
+  console.log('Tast 4');
+}
+
+func1(fucn2);
+
+const btnTag = document.getElementById('btn');
+const numTag = document.getElementById('num');
+
+let num;
+
+btnTag.onclick = function () {
+  num = numTag.value;
+  let real = Number(num);
+  console.log(real);
+};
