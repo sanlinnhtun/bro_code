@@ -10,12 +10,13 @@ submmitTag.onclick = function (e) {
   temp = Number(inputNum.value);
   if (frhTag.checked) {
     const f = (9 / 5) * temp + 32;
+    const ff = f.toFixed(1);
+
     alert(textNum);
     resultTag.textContent = `${ff}°F`;
   } else if (ccTag.checked) {
     const c = (5 / 9) * (temp - 32);
     const cc = c.toFixed(1);
-
     resultTag.textContent = `${cc}°C`;
   } else {
     resultTag.textContent = `Please slect the unit`;
